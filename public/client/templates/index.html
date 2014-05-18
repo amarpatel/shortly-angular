@@ -1,0 +1,28 @@
+<!doctype html>
+<html ng-app="shortly">
+  <head>
+    <meta charset="utf-8" />
+    <title>Shortly</title>
+    <link rel="stylesheet" type="text/css" href="dist/style.min.css">
+    <script src="/bower_components/angular/angular.js"></script>
+    <script src="/bower_components/angular-route/angular-route.js"></script>
+    <script src="/client/js/app.js"></script>
+  </head>
+
+  <body>
+    <h1>Shortly - angular</h1>
+
+    <div class='navigation'>
+      <ul>
+        <li><a href='#/' class='index'>All Links</a></li>
+        <li><a href='#/create' class='create'>Shorten</a></li>
+      </ul>
+      <a href='/logout' class='logout'>Logout</a>
+    </div>
+    <div id='container'></div>
+
+    <div ng-view></div>
+
+
+  </body>
+</html>

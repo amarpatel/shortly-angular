@@ -1,0 +1,19 @@
+ <div>
+   <input type="text" ng-model="search" placeholder="Search">
+
+    <select ng-model="sortBy">
+      <option value="visits">Visits</option>
+      <option value="title">Website</option>
+    </select>
+
+    <div class='info' ng-repeat="link in links | orderObjectBy: sortBy | filter:{title: search}">
+      <div class='visits'>
+        <span class='count'>
+          {{ link.visits }}
+        </span>Visits
+      </div>
+      <div class='title'>{{link.title}}</div>
+      <div class='original'>{{link.url}}</div>
+      <a href='{{link.base_url}}/{{link.code}}'>{{link.base_url}}/{{link.code}}</a>
+    </div>
+  </div>
